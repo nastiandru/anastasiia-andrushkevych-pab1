@@ -2,7 +2,7 @@ import express from 'express'
 import {Request, Response} from 'express'
 
 const app = express()
-
+var router = express.Router()
 const notes: Note[] = []
 
 class Note {
