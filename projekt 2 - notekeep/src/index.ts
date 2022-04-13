@@ -13,6 +13,7 @@ class Note {
   id?: number;
 }
 
+interface DataStorage {}
 class Tag{
   id?: number;
   name: string;
