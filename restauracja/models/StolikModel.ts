@@ -1,4 +1,4 @@
-class Stolik
+class StolikModel
 {
     numer: number;
     iloscOsob: number;
@@ -18,3 +18,5 @@ enum StatusStolika{
     Dirty,
     Niedostępny
 }
+
+export default StolikModel;
