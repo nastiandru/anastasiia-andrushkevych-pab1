@@ -7,7 +7,7 @@ enum JednostkaMiary
     l
 }
 
-class Produkt
+class ProduktModel
 {
     nazwa: string;
     cena: number;
@@ -22,3 +22,5 @@ class Produkt
         this.jednostkaMiary = jednostkaMiary;
     }
 }
+
+export default ProduktModel;
