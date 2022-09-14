@@ -7,7 +7,7 @@ enum JednostkaMiary
     l
 }
 
-class ProduktModel
+class Produkt
 {
     nazwa: string;
     cena: number;
@@ -23,4 +23,4 @@ class ProduktModel
     }
 }
 
-export default ProduktModel;
+export default Produkt;
