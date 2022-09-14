@@ -128,7 +128,7 @@ var RestaurantRepository = /** @class */ (function () {
             });
         });
     };
-    RestaurantRepository.prototype.getRestaurantsByName = function (restaurantName) {
+    RestaurantRepository.prototype.getRestaurantByName = function (restaurantName) {
         return __awaiter(this, void 0, void 0, function () {
             var restaurant;
             return __generator(this, function (_a) {
