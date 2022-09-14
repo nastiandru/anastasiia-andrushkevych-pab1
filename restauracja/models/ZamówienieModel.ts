@@ -1,6 +1,6 @@
 import Pracownik from "./PracownikModel";
-import PozycjaMenu from "./PozycjaMenuModel";
 import Stolik from "./StolikModel";
+import Danie from "./DanieModel"
 
 enum ZamowienieStatus 
 {
@@ -13,12 +13,12 @@ enum ZamowienieStatus
 class Zamowienie
 {
     pracownik: Pracownik;
-    pozycje: PozycjaMenu[];
+    pozycje: Danie[];
     status: ZamowienieStatus;
     stolik: Stolik;
     kwota: number;
 
-    constructor(pracownik: Pracownik, pozycje: PozycjaMenu[], status: ZamowienieStatus, stolik: Stolik, kwota: number)
+    constructor(pracownik: Pracownik, pozycje: Danie[], status: ZamowienieStatus, stolik: Stolik, kwota: number)
     {
         this.pracownik = pracownik;
         this.pozycje = pozycje;
