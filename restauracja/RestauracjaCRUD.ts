@@ -17,7 +17,7 @@ export class RestaurantRepository
     RestaurantModel = model<Restaurant>('Restaurant', this.restaurantSchema);
     async populateRestaurants() : Promise<void>
     {
-        await connect('');
+        await connect('mongodb+srv://nastia123:<password>@cluster0.eyf7qte.mongodb.net/?retryWrites=true&w=majority');
 
         const restaurants = [
             {
@@ -48,6 +48,7 @@ export class RestaurantRepository
     }
     async addRestaurant(restaurant: Restaurant) : Promise<void>
     {
+        await connect('mongodb+srv://nastia123:<password>@cluster0.eyf7qte.mongodb.net/?retryWrites=true&w=majority');
 
         await this.RestaurantModel
         .create(restaurant)
@@ -58,6 +59,8 @@ export class RestaurantRepository
     }
     async deleteRestaurantByName(restaurantName: string) : Promise<void>
     {
+        await connect('mongodb+srv://nastia123:<password>@cluster0.eyf7qte.mongodb.net/?retryWrites=true&w=majority');
+
         await this.RestaurantModel
         .deleteOne({name: restaurantName})
         .then(function()
@@ -66,9 +69,24 @@ export class RestaurantRepository
         });
     }
 
+    async getRestaurantsByName(restaurantName: string) : Promise<Restaurant>
+    {
+        await connect('mongodb+srv://nastia123:<password>@cluster0.eyf7qte.mongodb.net/?retryWrites=true&w=majority');
+        let restaurant = await this.RestaurantModel.findOne({name: restaurantName});
+        if (restaurant)
+        {
+            return restaurant;
+        }
+        else
+        {
+            return null as any;
+        }
+    }
+
     async getRestaurants() : Promise<Restaurant[]>
     {
-        return await this.RestaurantModel.find();
+        await connect('mongodb+srv://nastia123:<password>@cluster0.eyf7qte.mongodb.net/?retryWrites=true&w=majority');
+        return await this.RestaurantModel.find({});
     }
 
 }
