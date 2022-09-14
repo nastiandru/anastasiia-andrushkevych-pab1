@@ -1,4 +1,4 @@
- class RestauracjaModel{
+ class Restauraunt{
 
      nazwa: string;
      adres: string;
@@ -18,4 +18,4 @@
      }
  }
 
- export default RestauracjaModel;
+ export default Restauraunt;
