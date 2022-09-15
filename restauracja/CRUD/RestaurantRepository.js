@@ -60,7 +60,7 @@ var RestaurantRepository = /** @class */ (function () {
                         _a.sent();
                         restaurants = [
                             {
-                                name: 'Restaurant1',
+                                name: 'Чорна качка',
                                 address: 'Address1',
                                 phone: '123456789',
                                 nip: '123456789',
@@ -68,7 +68,7 @@ var RestaurantRepository = /** @class */ (function () {
                                 website: 'someWebsite.com'
                             },
                             {
-                                name: 'Restaurant2',
+                                name: 'Біла качка',
                                 address: 'Address2',
                                 phone: '987654321',
                                 nip: '987654321',
